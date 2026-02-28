@@ -3,45 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heart Server | Official Store</title>
-
+<title>Heart Server | Premium Store</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background: radial-gradient(circle at top,#1a0026,#000000);
+background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
 text-align:center;
 }
 
 /* HEADER */
 .header{
-padding:60px 20px 20px 20px;
+padding:60px 20px;
 }
 
 .header h1{
-font-size:55px;
+font-size:50px;
 font-weight:800;
 color:#ff2e63;
 text-shadow:0 0 25px #ff2e63;
 }
 
 .server-ip{
-margin-top:20px;
+margin-top:15px;
 display:inline-block;
 background:#ff2e63;
-padding:15px 40px;
-border-radius:40px;
-font-size:20px;
+padding:12px 35px;
+border-radius:30px;
 font-weight:600;
 box-shadow:0 0 20px #ff2e63;
 }
 
-/* RANK SECTION */
-.rank-section{
+/* SECTION TITLE */
+.section-title{
 margin-top:40px;
+font-size:28px;
+font-weight:600;
+color:#ff99ac;
+}
+
+/* RANK GRID */
+.rank-section{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
@@ -49,46 +54,46 @@ padding:20px;
 }
 
 .rank-card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(15px);
-border-radius:25px;
-padding:30px;
+background:rgba(255,255,255,0.07);
+border-radius:20px;
+padding:25px;
 margin:20px;
-width:270px;
+width:260px;
 transition:0.4s;
 box-shadow:0 0 15px rgba(255,46,99,0.4);
 }
 
 .rank-card:hover{
-transform:translateY(-12px);
-box-shadow:0 0 35px #ff2e63;
+transform:translateY(-10px);
+box-shadow:0 0 30px #ff2e63;
 }
 
-.rank-card h2{
-margin-bottom:15px;
-font-size:22px;
-}
+.rank-card h2{margin-bottom:10px;}
 
 .price{
-margin:15px 0;
-font-size:22px;
-color:#ff2e63;
+margin:10px 0;
+font-size:20px;
 font-weight:600;
 }
 
-.rank-card button{
+.free{color:#00ffae;}
+.paid{color:#ff2e63;}
+.boss{
+color:gold;
+text-shadow:0 0 15px gold;
+font-size:22px;
+}
+
+button{
 background:#ff2e63;
 color:white;
 border:none;
-padding:12px 25px;
+padding:10px 20px;
 border-radius:25px;
 cursor:pointer;
-font-weight:600;
-transition:0.3s;
 }
 
-.rank-card button:hover{
+button:hover{
 background:white;
 color:#ff2e63;
 }
@@ -96,8 +101,8 @@ color:#ff2e63;
 footer{
 margin-top:50px;
 padding:20px;
-background:#0a0a0a;
-color:#888;
+background:#111;
+color:#777;
 }
 </style>
 </head>
@@ -105,50 +110,72 @@ color:#888;
 
 <div class="header">
 <h1>💖 Heart Server</h1>
-<div class="server-ip">IP: play.heartsmp.qzz.io:25655</div>
+<div class="server-ip">IP: play.heartserver.in</div>
 </div>
 
+<h2 class="section-title">🎁 Free Ranks</h2>
+
 <section class="rank-section">
+<div class="rank-card">
+<h2>Member</h2>
+<p>Basic Access</p>
+<p class="price free">FREE</p>
+<button>Claim</button>
+</div>
 
 <div class="rank-card">
+<h2>Helper</h2>
+<p>Basic Commands</p>
+<p class="price free">FREE</p>
+<button>Claim</button>
+</div>
+
+<div class="rank-card">
+<h2>Warrior</h2>
+<p>Starter Kit</p>
+<p class="price free">FREE</p>
+<button>Claim</button>
+</div>
+</section>
+
+<h2 class="section-title">💎 Premium Ranks</h2>
+
+<section class="rank-section">
+<div class="rank-card">
 <h2>VIP</h2>
-<p>Starter Perks + Kit</p>
-<p class="price">₹99</p>
-<button>Buy Now</button>
+<p>Fly + Kit</p>
+<p class="price paid">₹99</p>
+<button>Buy</button>
 </div>
 
 <div class="rank-card">
 <h2>MVP</h2>
-<p>VIP + Fly</p>
-<p class="price">₹199</p>
-<button>Buy Now</button>
+<p>VIP + Extra Homes</p>
+<p class="price paid">₹199</p>
+<button>Buy</button>
 </div>
 
 <div class="rank-card">
-<h2>ELITE</h2>
-<p>Special Commands</p>
-<p class="price">₹299</p>
-<button>Buy Now</button>
+<h2>Legend</h2>
+<p>All Commands</p>
+<p class="price paid">₹499</p>
+<button>Buy</button>
 </div>
+</section>
 
+<h2 class="section-title">👑 Boss Rank</h2>
+
+<section class="rank-section">
 <div class="rank-card">
-<h2>LEGEND</h2>
-<p>All Access + OP Kit</p>
-<p class="price">₹499</p>
+<h2 class="boss">HEART BOSS</h2>
+<p>Ultimate Power + All Perks</p>
+<p class="price boss">₹1499</p>
 <button>Buy Now</button>
 </div>
-
-<div class="rank-card">
-<h2>IMMORTAL</h2>
-<p>Ultimate Rank</p>
-<p class="price">₹799</p>
-<button>Buy Now</button>
-</div>
-
 </section>
 
 <footer>
-© 2026 Heart Server | Official Store
+© 2026 Heart Server | Official Premium Store
 </footer>
 
 </body>
