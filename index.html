@@ -3,108 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heart Server</title>
+<title>Heart Server | Official</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff4d6d, #ff99ac);
-    color: white;
-    text-align: center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
-header {
-    padding: 40px 20px;
+
+body{
+background: radial-gradient(circle at top, #ff004c, #0f0c29);
+color:white;
+text-align:center;
+overflow-x:hidden;
 }
-h1 {
-    font-size: 45px;
+
+header{
+padding:60px 20px;
 }
-.server-ip {
-    background: white;
-    color: #ff4d6d;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
+
+h1{
+font-size:50px;
+text-shadow:0 0 20px #ff4d6d;
 }
-.rank-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 40px 20px;
+
+.server-ip{
+margin-top:15px;
+display:inline-block;
+background:white;
+color:#ff004c;
+padding:10px 25px;
+border-radius:30px;
+font-weight:bold;
 }
-.rank-card {
-    background: rgba(255,255,255,0.15);
-    padding: 20px;
-    margin: 15px;
-    border-radius: 15px;
-    width: 250px;
+
+.rank-section{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+padding:40px 20px;
 }
-.rank-card h2 {
-    margin: 10px 0;
+
+.rank-card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:25px;
+margin:20px;
+width:260px;
+transition:0.4s;
+box-shadow:0 0 15px rgba(255,0,76,0.5);
 }
-.price {
-    font-size: 20px;
-    margin: 10px 0;
+
+.rank-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #ff004c;
 }
-button {
-    background: white;
-    color: #ff4d6d;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
+
+.rank-card h2{
+margin-bottom:10px;
 }
-button:hover {
-    background: #ffe5ec;
+
+.price{
+margin:10px 0;
+font-size:20px;
+color:#ff99ac;
 }
-footer {
-    margin: 30px;
+
+button{
+background:#ff004c;
+color:white;
+border:none;
+padding:10px 25px;
+border-radius:25px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
 }
+
+button:hover{
+background:white;
+color:#ff004c;
+}
+
+footer{
+padding:20px;
+margin-top:40px;
+background:rgba(0,0,0,0.3);
+}
+
 </style>
 </head>
 <body>
 
 <header>
 <h1>💖 Heart Server</h1>
-<p>India's Best Minecraft SMP</p>
+<p>India's Most Powerful Minecraft SMP</p>
 <p class="server-ip">IP: play.heartserver.in</p>
 </header>
 
-<section class="rank-container">
+<section class="rank-section">
 
 <div class="rank-card">
-<h2>VIP Rank</h2>
-<p>Special Tag + Kit + Fly</p>
+<h2>VIP</h2>
+<p>Special Tag + Kit</p>
 <p class="price">₹99</p>
 <button onclick="buyRank('VIP')">Buy Now</button>
 </div>
 
 <div class="rank-card">
-<h2>MVP Rank</h2>
-<p>All VIP + Extra Perks</p>
+<h2>MVP</h2>
+<p>All VIP + Fly</p>
 <p class="price">₹199</p>
 <button onclick="buyRank('MVP')">Buy Now</button>
 </div>
 
 <div class="rank-card">
-<h2>Legend Rank</h2>
-<p>All Access + Special Powers</p>
+<h2>LEGEND</h2>
+<p>All Access + Powers</p>
 <p class="price">₹299</p>
-<button onclick="buyRank('Legend')">Buy Now</button>
+<button onclick="buyRank('LEGEND')">Buy Now</button>
+</div>
+
+<div class="rank-card">
+<h2>TITAN</h2>
+<p>Special Commands + OP Kit</p>
+<p class="price">₹499</p>
+<button onclick="buyRank('TITAN')">Buy Now</button>
+</div>
+
+<div class="rank-card">
+<h2>IMMORTAL</h2>
+<p>Ultimate Rank + All Perks</p>
+<p class="price">₹799</p>
+<button onclick="buyRank('IMMORTAL')">Buy Now</button>
 </div>
 
 </section>
 
 <footer>
-<p>© 2026 Heart Server | All Rights Reserved</p>
+© 2026 Heart Server | All Rights Reserved
 </footer>
 
 <script>
-function buyRank(rank) {
-    alert("You selected " + rank + " Rank. Contact Admin on Discord!");
-    // Yaha apna payment link daal sakta hai
-    // window.location.href = "https://your-payment-link.com";
+function buyRank(rank){
+alert("You selected " + rank + " Rank. Contact Admin to purchase!");
+// Yaha payment link add kar sakta hai
+// window.location.href="https://yourpaymentlink.com";
 }
 </script>
 
