@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heart Server</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff4d6d, #ff99ac);
+    color: white;
+    text-align: center;
+}
+header {
+    padding: 40px 20px;
+}
+h1 {
+    font-size: 45px;
+}
+.server-ip {
+    background: white;
+    color: #ff4d6d;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.rank-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+.rank-card {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    width: 250px;
+}
+.rank-card h2 {
+    margin: 10px 0;
+}
+.price {
+    font-size: 20px;
+    margin: 10px 0;
+}
+button {
+    background: white;
+    color: #ff4d6d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #ffe5ec;
+}
+footer {
+    margin: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>💖 Heart Server</h1>
+<p>India's Best Minecraft SMP</p>
+<p class="server-ip">IP: play.heartserver.in</p>
+</header>
+
+<section class="rank-container">
+
+<div class="rank-card">
+<h2>VIP Rank</h2>
+<p>Special Tag + Kit + Fly</p>
+<p class="price">₹99</p>
+<button onclick="buyRank('VIP')">Buy Now</button>
+</div>
+
+<div class="rank-card">
+<h2>MVP Rank</h2>
+<p>All VIP + Extra Perks</p>
+<p class="price">₹199</p>
+<button onclick="buyRank('MVP')">Buy Now</button>
+</div>
+
+<div class="rank-card">
+<h2>Legend Rank</h2>
+<p>All Access + Special Powers</p>
+<p class="price">₹299</p>
+<button onclick="buyRank('Legend')">Buy Now</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Heart Server | All Rights Reserved</p>
+</footer>
+
+<script>
+function buyRank(rank) {
+    alert("You selected " + rank + " Rank. Contact Admin on Discord!");
+    // Yaha apna payment link daal sakta hai
+    // window.location.href = "https://your-payment-link.com";
+}
+</script>
+
+</body>
+</html>
