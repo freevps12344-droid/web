@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heart Server | Premium Store</title>
+<title>Heart SMP | Official</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{
-background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-color:white;
-}
+body{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:white;}
 
 /* TOP BAR */
 .topbar{
@@ -24,7 +20,7 @@ padding:20px 30px;
 }
 
 .logo{
-font-size:26px;
+font-size:24px;
 font-weight:900;
 color:#ff2e63;
 }
@@ -51,6 +47,7 @@ display:block;
 padding:8px;
 color:white;
 text-decoration:none;
+cursor:pointer;
 }
 
 .dropdown a:hover{
@@ -58,18 +55,27 @@ background:#ff2e63;
 border-radius:6px;
 }
 
-.show{
-display:block;
+.show{display:block;}
+
+/* SECTIONS */
+.section{
+display:none;
+padding:60px 20px;
+text-align:center;
 }
 
-/* HEADER */
-.header{
-text-align:center;
-padding:40px 20px;
+.active{display:block;}
+
+/* HOME */
+.big-logo{
+font-size:60px;
+font-weight:900;
+color:#ff2e63;
+text-shadow:0 0 25px #ff2e63;
+margin-bottom:20px;
 }
 
 .server-ip{
-margin-top:15px;
 display:inline-block;
 background:#ff2e63;
 padding:12px 35px;
@@ -78,20 +84,12 @@ font-weight:bold;
 box-shadow:0 0 20px #ff2e63;
 }
 
-/* SECTION TITLE */
-.section-title{
-text-align:center;
-margin-top:30px;
-font-size:24px;
-color:#ff99ac;
-}
-
-/* RANK GRID */
+/* RANKS */
 .rank-section{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-padding:20px;
+margin-top:30px;
 }
 
 .rank-card{
@@ -102,7 +100,6 @@ margin:15px;
 width:240px;
 transition:0.4s;
 box-shadow:0 0 15px rgba(255,46,99,0.4);
-text-align:center;
 }
 
 .rank-card:hover{
@@ -110,17 +107,10 @@ transform:translateY(-8px);
 box-shadow:0 0 30px #ff2e63;
 }
 
-.price{
-margin:10px 0;
-font-weight:bold;
-}
-
+.price{margin:10px 0;font-weight:bold;}
 .free{color:#00ffae;}
 .paid{color:#ff2e63;}
-.boss{
-color:gold;
-text-shadow:0 0 10px gold;
-}
+.boss{color:gold;text-shadow:0 0 10px gold;}
 
 button{
 background:#ff2e63;
@@ -143,115 +133,67 @@ color:#777;
 <body>
 
 <div class="topbar">
-<div class="logo">💖 Heart Server</div>
+<div class="logo">💖 Heart SMP</div>
 
 <div class="menu" onclick="toggleMenu()">⋮
 <div id="dropdown" class="dropdown">
-<a href="#">Home</a>
-<a href="#">Store</a>
-<a href="#">Contact</a>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('store')">Store</a>
+<a onclick="showSection('contact')">Contact</a>
 </div>
 </div>
 </div>
 
-<div class="header">
+<!-- HOME SECTION -->
+<div id="home" class="section active">
+<div class="big-logo">💖 HEART SMP</div>
 <div class="server-ip">IP: play.heartsmp.qzz.io:25655</div>
 </div>
 
-<h2 class="section-title">🎁 Free Ranks</h2>
-<section class="rank-section">
-<div class="rank-card">
-<h3>Member</h3>
-<p class="price free">FREE</p>
-<button>Claim</button>
+<!-- STORE SECTION -->
+<div id="store" class="section">
+<h2>🎁 Free Ranks</h2>
+<div class="rank-section">
+<div class="rank-card"><h3>Member</h3><p class="price free">FREE</p><button>Claim</button></div>
+<div class="rank-card"><h3>Warrior</h3><p class="price free">FREE</p><button>Claim</button></div>
+<div class="rank-card"><h3>Helper</h3><p class="price free">FREE</p><button>Claim</button></div>
 </div>
 
-<div class="rank-card">
-<h3>Warrior</h3>
-<p class="price free">FREE</p>
-<button>Claim</button>
+<h2 style="margin-top:40px;">💎 Premium Ranks</h2>
+<div class="rank-section">
+<div class="rank-card"><h3>VIP</h3><p class="price paid">₹99</p><button>Buy</button></div>
+<div class="rank-card"><h3>MVP</h3><p class="price paid">₹199</p><button>Buy</button></div>
+<div class="rank-card"><h3>Legend</h3><p class="price paid">₹499</p><button>Buy</button></div>
 </div>
 
-<div class="rank-card">
-<h3>Helper</h3>
-<p class="price free">FREE</p>
-<button>Claim</button>
+<h2 style="margin-top:40px;">👑 Boss & Staff</h2>
+<div class="rank-section">
+<div class="rank-card"><h3 class="boss">Moderator</h3><p class="price boss">₹999</p><button>Buy</button></div>
+<div class="rank-card"><h3 class="boss">Admin</h3><p class="price boss">₹1499</p><button>Buy</button></div>
+<div class="rank-card"><h3 class="boss">Owner</h3><p class="price boss">₹4999</p><button>Buy</button></div>
+</div>
 </div>
 
-<div class="rank-card">
-<h3>Fighter</h3>
-<p class="price free">FREE</p>
-<button>Claim</button>
+<!-- CONTACT SECTION -->
+<div id="contact" class="section">
+<h2>📩 Contact Us</h2>
+<p>Discord: yourdiscord#0001</p>
+<p>WhatsApp: +91XXXXXXXXXX</p>
 </div>
-
-<div class="rank-card">
-<h3>Builder</h3>
-<p class="price free">FREE</p>
-<button>Claim</button>
-</div>
-</section>
-
-<h2 class="section-title">💎 Premium Ranks</h2>
-<section class="rank-section">
-<div class="rank-card">
-<h3>VIP</h3>
-<p class="price paid">₹99</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3>MVP</h3>
-<p class="price paid">₹199</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3>Elite</h3>
-<p class="price paid">₹299</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3>Legend</h3>
-<p class="price paid">₹499</p>
-<button>Buy</button>
-</div>
-</section>
-
-<h2 class="section-title">👑 Boss & Staff Ranks</h2>
-<section class="rank-section">
-<div class="rank-card">
-<h3 class="boss">Moderator</h3>
-<p class="price boss">₹999</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3 class="boss">Admin</h3>
-<p class="price boss">₹1499</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3 class="boss">Co-Owner</h3>
-<p class="price boss">₹2499</p>
-<button>Buy</button>
-</div>
-
-<div class="rank-card">
-<h3 class="boss">HEART OWNER</h3>
-<p class="price boss">₹4999</p>
-<button>Buy</button>
-</div>
-</section>
 
 <footer>
-© 2026 Heart Server | Premium Store
+© 2026 Heart SMP | Official Server
 </footer>
 
 <script>
 function toggleMenu(){
 document.getElementById("dropdown").classList.toggle("show");
+}
+
+function showSection(id){
+document.querySelectorAll(".section").forEach(sec=>sec.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+document.getElementById("dropdown").classList.remove("show");
 }
 </script>
 
