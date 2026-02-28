@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heart Server | Premium Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
@@ -12,19 +13,59 @@
 body{
 background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
-text-align:center;
+}
+
+/* TOP BAR */
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 30px;
+}
+
+.logo{
+font-size:26px;
+font-weight:900;
+color:#ff2e63;
+}
+
+.menu{
+position:relative;
+cursor:pointer;
+font-size:26px;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+right:0;
+top:35px;
+background:#1b1b2f;
+border-radius:10px;
+padding:10px;
+width:150px;
+}
+
+.dropdown a{
+display:block;
+padding:8px;
+color:white;
+text-decoration:none;
+}
+
+.dropdown a:hover{
+background:#ff2e63;
+border-radius:6px;
+}
+
+.show{
+display:block;
 }
 
 /* HEADER */
 .header{
-padding:60px 20px;
-}
-
-.header h1{
-font-size:50px;
-font-weight:800;
-color:#ff2e63;
-text-shadow:0 0 25px #ff2e63;
+text-align:center;
+padding:40px 20px;
 }
 
 .server-ip{
@@ -33,15 +74,15 @@ display:inline-block;
 background:#ff2e63;
 padding:12px 35px;
 border-radius:30px;
-font-weight:600;
+font-weight:bold;
 box-shadow:0 0 20px #ff2e63;
 }
 
 /* SECTION TITLE */
 .section-title{
-margin-top:40px;
-font-size:28px;
-font-weight:600;
+text-align:center;
+margin-top:30px;
+font-size:24px;
 color:#ff99ac;
 }
 
@@ -56,127 +97,163 @@ padding:20px;
 .rank-card{
 background:rgba(255,255,255,0.07);
 border-radius:20px;
-padding:25px;
-margin:20px;
-width:260px;
+padding:20px;
+margin:15px;
+width:240px;
 transition:0.4s;
 box-shadow:0 0 15px rgba(255,46,99,0.4);
+text-align:center;
 }
 
 .rank-card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 box-shadow:0 0 30px #ff2e63;
 }
 
-.rank-card h2{margin-bottom:10px;}
-
 .price{
 margin:10px 0;
-font-size:20px;
-font-weight:600;
+font-weight:bold;
 }
 
 .free{color:#00ffae;}
 .paid{color:#ff2e63;}
 .boss{
 color:gold;
-text-shadow:0 0 15px gold;
-font-size:22px;
+text-shadow:0 0 10px gold;
 }
 
 button{
 background:#ff2e63;
 color:white;
 border:none;
-padding:10px 20px;
-border-radius:25px;
+padding:8px 18px;
+border-radius:20px;
 cursor:pointer;
 }
 
-button:hover{
-background:white;
-color:#ff2e63;
-}
-
 footer{
-margin-top:50px;
+text-align:center;
 padding:20px;
 background:#111;
+margin-top:40px;
 color:#777;
 }
 </style>
 </head>
 <body>
 
+<div class="topbar">
+<div class="logo">💖 Heart Server</div>
+
+<div class="menu" onclick="toggleMenu()">⋮
+<div id="dropdown" class="dropdown">
+<a href="#">Home</a>
+<a href="#">Store</a>
+<a href="#">Contact</a>
+</div>
+</div>
+</div>
+
 <div class="header">
-<h1>💖 Heart Server</h1>
 <div class="server-ip">IP: play.heartserver.in</div>
 </div>
 
 <h2 class="section-title">🎁 Free Ranks</h2>
-
 <section class="rank-section">
 <div class="rank-card">
-<h2>Member</h2>
-<p>Basic Access</p>
+<h3>Member</h3>
 <p class="price free">FREE</p>
 <button>Claim</button>
 </div>
 
 <div class="rank-card">
-<h2>Helper</h2>
-<p>Basic Commands</p>
+<h3>Warrior</h3>
 <p class="price free">FREE</p>
 <button>Claim</button>
 </div>
 
 <div class="rank-card">
-<h2>Warrior</h2>
-<p>Starter Kit</p>
+<h3>Helper</h3>
+<p class="price free">FREE</p>
+<button>Claim</button>
+</div>
+
+<div class="rank-card">
+<h3>Fighter</h3>
+<p class="price free">FREE</p>
+<button>Claim</button>
+</div>
+
+<div class="rank-card">
+<h3>Builder</h3>
 <p class="price free">FREE</p>
 <button>Claim</button>
 </div>
 </section>
 
 <h2 class="section-title">💎 Premium Ranks</h2>
-
 <section class="rank-section">
 <div class="rank-card">
-<h2>VIP</h2>
-<p>Fly + Kit</p>
+<h3>VIP</h3>
 <p class="price paid">₹99</p>
 <button>Buy</button>
 </div>
 
 <div class="rank-card">
-<h2>MVP</h2>
-<p>VIP + Extra Homes</p>
+<h3>MVP</h3>
 <p class="price paid">₹199</p>
 <button>Buy</button>
 </div>
 
 <div class="rank-card">
-<h2>Legend</h2>
-<p>All Commands</p>
+<h3>Elite</h3>
+<p class="price paid">₹299</p>
+<button>Buy</button>
+</div>
+
+<div class="rank-card">
+<h3>Legend</h3>
 <p class="price paid">₹499</p>
 <button>Buy</button>
 </div>
 </section>
 
-<h2 class="section-title">👑 Boss Rank</h2>
-
+<h2 class="section-title">👑 Boss & Staff Ranks</h2>
 <section class="rank-section">
 <div class="rank-card">
-<h2 class="boss">HEART BOSS</h2>
-<p>Ultimate Power + All Perks</p>
+<h3 class="boss">Moderator</h3>
+<p class="price boss">₹999</p>
+<button>Buy</button>
+</div>
+
+<div class="rank-card">
+<h3 class="boss">Admin</h3>
 <p class="price boss">₹1499</p>
-<button>Buy Now</button>
+<button>Buy</button>
+</div>
+
+<div class="rank-card">
+<h3 class="boss">Co-Owner</h3>
+<p class="price boss">₹2499</p>
+<button>Buy</button>
+</div>
+
+<div class="rank-card">
+<h3 class="boss">HEART OWNER</h3>
+<p class="price boss">₹4999</p>
+<button>Buy</button>
 </div>
 </section>
 
 <footer>
-© 2026 Heart Server | Official Premium Store
+© 2026 Heart Server | Premium Store
 </footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("dropdown").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
